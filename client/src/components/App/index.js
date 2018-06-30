@@ -1,7 +1,14 @@
 import React from 'react'
 
-const App = () =>{
-  return <h1>Hello World</h1>
+import { Header, Footer } from '../'
+
+const App = () => {
+  return (
+    <div className="App">
+      <Header />
+      <Footer />
+    </div>
+  )
 }
 
 export default App
