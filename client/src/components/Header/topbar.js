@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Row, Col, Navbar, Nav, NavItem } from 'react-bootstrap'
+import { Navbar, Nav, NavItem } from 'react-bootstrap'
 
 import { withRouter, Link } from 'react-router-dom'
 

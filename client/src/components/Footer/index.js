@@ -7,7 +7,10 @@ const Footer = () => {
     <footer>
       <Grid>
         <Row>
-          <Col md={12}>{moment().format('Y')} &copy; Trần Nhật Duy</Col>
+          <Col md={12}>
+            {moment().format('Y')} &copy; Make with{' '}
+            <span style={{ color: 'red' }}>❤</span> Trần Nhật Duy
+          </Col>
         </Row>
       </Grid>
     </footer>
