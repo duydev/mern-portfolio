@@ -1,29 +1,45 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { Grid, Row, Col, Image, Button } from 'react-bootstrap'
+import { connect } from 'react-redux'
 
-const Header = () => {
-  return (
-    <header>
-      <Grid>
-        <Row>
-          <Col md={12}>
-            <Image
-              src="https://media.licdn.com/dms/image/C4E03AQFB1Bjdomws2Q/profile-displayphoto-shrink_200_200/0?e=1535587200&v=beta&t=zDkhZyGe8DsELe4AyyUNyUixxNvJh7_r_-vJL7m5QoE"
-              circle
-            />
-            <div className="about">
-              <div>Hello, my name is</div>
-              <h2>Trần Nhật Duy</h2>
-              <div className="des">
-                I'm a fullstack developer. I love to build awesome product.
+import { fetchAvatar } from '../../actions/header'
+
+class Header extends Component {
+  componentDidMount() {
+    this.props.dispatch(fetchAvatar(this.props.email))
+  }
+
+  render() {
+    const { fullName, description, avatarUrl } = this.props
+
+    return (
+      <header>
+        <Grid>
+          <Row>
+            <Col md={12}>
+              <Image src={avatarUrl} circle />
+              <div className="about">
+                <div>Hello, my name is</div>
+                <h2>{fullName}</h2>
+                <div className="des">{description}</div>
+                <Button>My CV</Button>
               </div>
-              <Button>My CV</Button>
-            </div>
-          </Col>
-        </Row>
-      </Grid>
-    </header>
-  )
+            </Col>
+          </Row>
+        </Grid>
+      </header>
+    )
+  }
 }
 
-export default Header
+const mapStateToProps = state => ({
+  fullName: state.header.fullName,
+  email: state.header.email,
+  description: state.header.description,
+  email: state.header.email,
+  avatarUrl: state.header.avatarUrl,
+  loading: state.header.loading,
+  error: state.header.error
+})
+
+export default connect(mapStateToProps)(Header)

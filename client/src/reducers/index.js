@@ -1,15 +1,7 @@
-import { types } from '../reducers'
+import { combineReducers } from 'redux'
 
-export const initialState = {
-  loading: false,
-  error: null
-}
+import headerReducer from './header'
 
-const reducer = (state = initialState, action) => {
-  switch (action.type) {
-    default:
-      return state
-  }
-}
+export const initialState = {}
 
-export default reducer
+export default combineReducers({ header: headerReducer })
