@@ -1,13 +1,13 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 
-import { Home } from '../index'
+import { About } from '../index'
 
 const Main = () => {
   return (
     <div className="wrapper">
       <Switch>
-        <Route component={Home} />
+        <Route component={About} />
       </Switch>
     </div>
   )

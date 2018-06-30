@@ -1,6 +1,6 @@
 import Header from './Header'
 import Footer from './Footer'
 import Main from './Main'
-import Home from './Home'
+import About from './About'
 
-export { Header, Footer, Main, Home }
+export { Header, Footer, Main, About }
