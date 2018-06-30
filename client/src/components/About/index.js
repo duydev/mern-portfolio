@@ -1,5 +1,6 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
+import { Grid, Row, Col } from 'react-bootstrap'
 
 const About = () => {
   return (
@@ -7,7 +8,12 @@ const About = () => {
       <Helmet>
         <title>About Me</title>
       </Helmet>
-      Hello{' '}
+      <Grid>
+        <Row>
+          <Col md={9}>Main</Col>
+          <Col md={3}>Sidebar</Col>
+        </Row>
+      </Grid>
     </div>
   )
 }

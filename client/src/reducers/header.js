@@ -4,9 +4,7 @@ const initialState = {
   fullName: 'Trần Nhật Duy',
   description: `I'm a fullstack developer. I love to build awesome product.`,
   email: 'duytn.hcm@gmail.com',
-  avatarUrl: 'https://www.gravatar.com/avatar/?s=200&d=mp',
-  loading: false,
-  error: null
+  avatarUrl: 'https://www.gravatar.com/avatar/?s=200&d=mp'
 }
 
 const reducer = (state = initialState, action) => {

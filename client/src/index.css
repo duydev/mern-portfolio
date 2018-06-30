@@ -8,13 +8,16 @@ body {
 
 header {
   background: #27c97b;
-  padding: 25px 0;
 }
 
 header img {
   margin-right: 3em;
   width: 200px;
   height: 200px;
+}
+
+header .about-me {
+  padding: 25px 0;
 }
 
 header .about {
@@ -49,4 +52,51 @@ footer {
   color: #fff;
   padding: 10px 0;
   text-align: center;
+}
+
+.social-list {
+  display: inline-block;
+  padding: 5px;
+  margin: 0;
+}
+
+.social-list a {
+  display: inline-block;
+  color: #fff;
+  width: 36px;
+  height: 36px;
+  text-align: center;
+  padding-top: 7px;
+  border-radius: 50%;
+}
+
+.social-list a:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+header .topbar {
+  background: #167447;
+  border: none;
+  margin: 0;
+}
+
+/* Link */
+.navbar-default .navbar-nav > li > a {
+  color: #fff;
+  font-size: 14px;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #fff;
+  font-size: 16px;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  background: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  box-shadow: none;
 }
